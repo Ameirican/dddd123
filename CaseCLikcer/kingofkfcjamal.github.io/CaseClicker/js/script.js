@@ -15,7 +15,7 @@ if (localStorage.getItem("imgData") === null) {
 }
 
 var currentCase = "case1";
-var acceptMoneyPerClick = 100000.01;
+var acceptMoneyPerClick = 1000000.01;
 
 /*=========================Inventory============================*/
 //In inventory: weap skins
@@ -34,7 +34,7 @@ var acceptedsound = true;
 var inventory = {};
 var jackpotInventory = {};
 
-var inventoryMax = 50;
+var inventoryMax = 100;
 var inventoryCurrent = 0;
 
 var keyPrice = 0.50;
@@ -22833,7 +22833,7 @@ var totalKnivesOpened = 0;
 function beatboy() {
 	money += 5000;
 	inventoryMax += 200
-	stackingUpgradesPurchased['upgrade1'] += 200;
+	stackingUpgradesPurchased['upgrade1'] += 10;
 };
 
 //cases -> case# -> rarity  -> weaponname, price, img
@@ -22845,8 +22845,8 @@ var rarityValue = {
 	milspec: 0.75,
 	restricted: 0.92,
 	classified: 0.97,
-	stattrak: 0.98,
-	covert: 0.995
+	stattrak: 5.98,
+	covert: 10.995
 };
 
 function randSkin() {
@@ -23362,7 +23362,7 @@ function inventoryValue() {
 
 /*===============UPGRADES===============*/
 function upgradeMultiplier(basePrice, amount) {
-	var newPrice = basePrice * Math.pow(2.00, amount + 1).toFixed(2);
+	var newPrice = basePrice * Math.pow(1.00, amount + 1).toFixed(2);
 	console.log(newPrice);
 	return newPrice;
 }
@@ -23395,7 +23395,7 @@ var stackingUpgrades = {
 	upgrade1: {
 		name: "Inventory Space",
 		desc: "+1 to your max inventory space.",
-		basePrice: 15,
+		basePrice: 10,
 		price: 15,
 		cp: 0.00,
 		kp: 0.00,
